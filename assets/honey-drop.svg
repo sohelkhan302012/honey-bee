@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="180" viewBox="0 0 120 180" fill="none">
+  <defs>
+    <linearGradient id="honey" x1="25" y1="25" x2="100" y2="170" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#fff1b0"/><stop offset=".27" stop-color="#f9c449"/><stop offset=".62" stop-color="#d78a0b"/><stop offset="1" stop-color="#9b4908"/>
+    </linearGradient>
+    <radialGradient id="light" cx="0" cy="0" r="1" gradientTransform="translate(46 112) rotate(75) scale(61 44)" gradientUnits="userSpaceOnUse"><stop stop-color="#ffdf69" stop-opacity=".8"/><stop offset="1" stop-color="#ffb52b" stop-opacity="0"/></radialGradient>
+    <linearGradient id="edge" x1="24" y1="40" x2="98" y2="163" gradientUnits="userSpaceOnUse"><stop stop-color="#fff5ca" stop-opacity=".85"/><stop offset=".5" stop-color="#ffd676" stop-opacity=".2"/><stop offset="1" stop-color="#edb34c" stop-opacity=".65"/></linearGradient>
+  </defs>
+  <path d="M60 5C59 43 43 66 27 91C14 111 12 126 18 143C24 163 41 175 60 175C79 175 96 163 102 143C108 126 106 111 93 91C77 66 61 43 60 5Z" fill="url(#honey)" stroke="url(#edge)" stroke-width="2"/>
+  <path d="M60 5C59 43 43 66 27 91C14 111 12 126 18 143C24 163 41 175 60 175C79 175 96 163 102 143C108 126 106 111 93 91C77 66 61 43 60 5Z" fill="url(#light)"/>
+  <path d="M48 69C39 88 25 108 25 125C25 137 29 146 35 151" stroke="#fff4c6" stroke-opacity=".65" stroke-width="5" stroke-linecap="round"/>
+  <path d="M87 112C94 130 90 146 81 155" stroke="#ffe8a2" stroke-opacity=".3" stroke-width="3" stroke-linecap="round"/>
+  <ellipse cx="54" cy="132" rx="5" ry="7" stroke="#9b5908" stroke-opacity=".3"/>
+  <circle cx="68" cy="111" r="3" stroke="#a0650d" stroke-opacity=".3"/>
+  <circle cx="49" cy="103" r="2" fill="#fff0ab" fill-opacity=".45"/>
+</svg>

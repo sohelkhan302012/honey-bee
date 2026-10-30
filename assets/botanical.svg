@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 700" fill="none">
+  <defs>
+    <linearGradient id="leafA" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#9DB88F"/>
+      <stop offset="1" stop-color="#2F5A3E"/>
+    </linearGradient>
+    <linearGradient id="leafB" x1="1" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#6F9A6B"/>
+      <stop offset="1" stop-color="#1B3F2D"/>
+    </linearGradient>
+    <radialGradient id="petal" cx=".5" cy=".5" r=".6">
+      <stop offset="0" stop-color="#FFD766"/>
+      <stop offset="1" stop-color="#F5B928"/>
+    </radialGradient>
+  </defs>
+  <path d="M60 690 C 140 520, 190 380, 330 230 S 520 60, 560 20" stroke="#3E6B4A" stroke-width="5" stroke-linecap="round"/>
+  <g>
+    <path d="M150 520 C 70 500, 30 430, 40 380 C 110 380, 160 430, 150 520Z" fill="url(#leafA)"/>
+    <path d="M150 520 C 100 470, 80 430, 40 380" stroke="#1B3F2D" stroke-opacity=".5" stroke-width="2"/>
+    <path d="M185 430 C 270 430, 330 380, 340 320 C 260 310, 195 360, 185 430Z" fill="url(#leafB)"/>
+    <path d="M185 430 C 240 390, 290 350, 340 320" stroke="#0E2A1E" stroke-opacity=".5" stroke-width="2"/>
+    <path d="M245 330 C 170 300, 150 230, 175 180 C 240 200, 270 270, 245 330Z" fill="url(#leafA)"/>
+    <path d="M245 330 C 215 280, 195 230, 175 180" stroke="#1B3F2D" stroke-opacity=".5" stroke-width="2"/>
+    <path d="M330 240 C 420 250, 480 200, 490 140 C 410 120, 340 170, 330 240Z" fill="url(#leafB)"/>
+    <path d="M330 240 C 390 200, 440 170, 490 140" stroke="#0E2A1E" stroke-opacity=".5" stroke-width="2"/>
+    <path d="M420 130 C 380 70, 390 20, 430 -10 C 470 40, 460 100, 420 130Z" fill="url(#leafA)"/>
+  </g>
+  <g transform="translate(120 600)">
+    <g fill="url(#petal)">
+      <ellipse cx="0" cy="-26" rx="8" ry="18"/>
+      <ellipse cx="0" cy="26" rx="8" ry="18"/>
+      <ellipse cx="-26" cy="0" rx="18" ry="8"/>
+      <ellipse cx="26" cy="0" rx="18" ry="8"/>
+      <ellipse cx="-18" cy="-18" rx="8" ry="18" transform="rotate(-45 -18 -18)"/>
+      <ellipse cx="18" cy="-18" rx="8" ry="18" transform="rotate(45 18 -18)"/>
+      <ellipse cx="-18" cy="18" rx="8" ry="18" transform="rotate(45 -18 18)"/>
+      <ellipse cx="18" cy="18" rx="8" ry="18" transform="rotate(-45 18 18)"/>
+    </g>
+    <circle r="9" fill="#B9770E"/>
+  </g>
+  <g transform="translate(300 420) scale(.8)">
+    <g fill="url(#petal)">
+      <ellipse cx="0" cy="-26" rx="8" ry="18"/>
+      <ellipse cx="0" cy="26" rx="8" ry="18"/>
+      <ellipse cx="-26" cy="0" rx="18" ry="8"/>
+      <ellipse cx="26" cy="0" rx="18" ry="8"/>
+      <ellipse cx="-18" cy="-18" rx="8" ry="18" transform="rotate(-45 -18 -18)"/>
+      <ellipse cx="18" cy="-18" rx="8" ry="18" transform="rotate(45 18 -18)"/>
+      <ellipse cx="-18" cy="18" rx="8" ry="18" transform="rotate(45 -18 18)"/>
+      <ellipse cx="18" cy="18" rx="8" ry="18" transform="rotate(-45 18 18)"/>
+    </g>
+    <circle r="9" fill="#B9770E"/>
+  </g>
+  <g transform="translate(470 270) scale(.6)">
+    <g fill="url(#petal)">
+      <ellipse cx="0" cy="-26" rx="8" ry="18"/>
+      <ellipse cx="0" cy="26" rx="8" ry="18"/>
+      <ellipse cx="-26" cy="0" rx="18" ry="8"/>
+      <ellipse cx="26" cy="0" rx="18" ry="8"/>
+      <ellipse cx="-18" cy="-18" rx="8" ry="18" transform="rotate(-45 -18 -18)"/>
+      <ellipse cx="18" cy="-18" rx="8" ry="18" transform="rotate(45 18 -18)"/>
+      <ellipse cx="-18" cy="18" rx="8" ry="18" transform="rotate(45 -18 18)"/>
+      <ellipse cx="18" cy="18" rx="8" ry="18" transform="rotate(-45 18 18)"/>
+    </g>
+    <circle r="9" fill="#B9770E"/>
+  </g>
+</svg>

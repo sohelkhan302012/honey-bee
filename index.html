@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Golden Bloom &mdash; A Little Golden Goodness</title>
+  <meta name="description" content="Discover Golden Bloom honey. Explore the journey from flower to honeycomb and find a golden addition to your everyday table.">
+  <meta name="theme-color" content="#071D16">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Golden Bloom &mdash; A Little Golden Goodness">
+  <meta property="og:description" content="Golden Bloom honey. A golden drizzle for breakfast, drinks and everyday recipes.">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts: Playfair Display + Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;1,400&display=swap" rel="stylesheet">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="premium.css">
+
+  <!-- Preload Critical Visual Assets -->
+  <link rel="preload" as="image" href="assets/flower.png">
+  <link rel="preload" as="image" href="assets/bee.webp" type="image/webp">
+  <link rel="preload" as="image" href="assets/honey-drop.svg">
+</head>
+<body>
+
+  <!-- Skip link for keyboard accessibility -->
+  <a class="skip-link" href="#panel-1">Skip to content</a>
+
+  <!-- Cinematic Subtle Film Grain Overlay -->
+  <div class="grain" aria-hidden="true"></div>
+
+    <!-- Subtle Premium Honeycomb & Bee Watermark Background Pattern -->
+  <div class="site-honey-pattern" aria-hidden="true"></div>
+
+  <!-- Dedicated Honeybee Custom Cursor (Flapping Animated Asset GIF/WebP) -->
+  <div id="bee-cursor" class="bee-cursor" aria-hidden="true">
+    <div class="bee-cursor-motion" id="bee-cursor-motion">
+      <div class="bee-cursor-flip" id="bee-cursor-flip">
+        <picture>
+          <source srcset="assets/curser.svg" type="image/svg+xml">
+          <img src="assets/curser.svg" alt="" class="bee-cursor-sprite" id="bee-cursor-sprite" width="46" height="39">
+        </picture>
+      </div>
+    </div>
+  </div>
+
+  <!-- Autonomous Flying Honeybee GIF (Roams naturally across the website with off-screen edge turns) -->
+
+
+  <!-- Top Sticky Glass Navigation -->
+  <nav id="nav" class="nav" aria-label="Primary navigation">
+    <a href="#panel-1" class="brand" data-goto="0">
+      <svg width="28" height="32" viewBox="0 0 28 32" fill="none" aria-hidden="true">
+        <polygon points="14,1 27,8.5 27,23.5 14,31 1,23.5 1,8.5" stroke="var(--gold)" stroke-width="2" fill="rgba(245, 185, 40, 0.12)"/>
+        <path d="M14 8 C11 13 8 16 8 20 C8 23.3 10.7 26 14 26 C17.3 26 20 23.3 20 20 C20 16 17 13 14 8 Z" fill="var(--gold)"/>
+      </svg>
+      <span>Golden Bloom</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#panel-1" data-goto="0" class="is-active">The Bloom</a></li>
+      <li><a href="#panel-2" data-goto="1">Nectar Drop</a></li>
+      <li><a href="#panel-3" data-goto="2">Honey Rituals</a></li>
+      <li><a href="#panel-4" data-goto="3">The Golden Jar</a></li>
+      <li><a href="#collection" data-goto="4">Collection</a></li>
+      <li><a href="#process" data-goto="5">From Hive</a></li>
+      <li><a href="#stories" data-goto="6">Honey Guide</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button type="button" class="nav-cart-btn" id="cart-toggle-btn" aria-label="Open Shopping Basket">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="9" cy="21" r="1"/>
+          <circle cx="20" cy="21" r="1"/>
+          <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+        </svg>
+        <span class="cart-badge" id="cart-badge">0</span>
+      </button>
+      <a href="#collection" class="btn btn-sm" id="nav-cta" data-goto="4">Order Honey</a>
+    </div>
+  </nav>
+
+
+
+  <!-- Vertical Journey Scroll Progress Indicator -->
+  <div class="progress" aria-hidden="true">
+    <div class="progress-track"><span class="progress-fill"></span></div>
+    <button type="button" class="progress-dot is-active" aria-label="Go to Panel 1: The Bloom"></button>
+    <button type="button" class="progress-dot" aria-label="Go to Panel 2: Nectar Drop"></button>
+    <button type="button" class="progress-dot" aria-label="Go to Panel 3: Honey Rituals"></button>
+    <button type="button" class="progress-dot" aria-label="Go to Panel 4: The Golden Jar"></button>
+  </div>
+
+  <!-- MAIN PINNED JOURNEY CONTAINER -->
+  <main id="journey" class="journey">
+
+    <!-- 1. BACKGROUND STACK -->
+    <div class="bg-stack" aria-hidden="true">
+      <div class="honey-texture-overlay"></div>
+
+      <!-- Glowing Ambient Honeycomb Matrix -->
+      <div class="honeycomb-ambient">
+        <div class="honey-glow-cell hgc-1"></div>
+        <div class="honey-glow-cell hgc-2"></div>
+        <div class="honey-glow-cell hgc-3"></div>
+        <div class="honey-glow-cell hgc-4"></div>
+      </div>
+
+      <!-- Panel 1 Background: Forest Glow & Ambient Drifting Spores -->
+      <div class="bg bg-1">
+        <div class="sun"></div>
+        <div id="particles" class="particles"></div>
+      </div>
+
+      <!-- Panel 2 Background: Viscous Honey Pool, Ripples & Splash Droplets -->
+      <div class="bg bg-2">
+        <div class="honey-pool"></div>
+        <div class="surface"></div>
+        <div class="ripple"><span></span><span></span></div>
+        <div class="splash-drops">
+          <span class="s-drop"></span>
+          <span class="s-drop"></span>
+          <span class="s-drop"></span>
+          <span class="s-drop"></span>
+          <span class="s-drop"></span>
+          <span class="s-drop"></span>
+        </div>
+      </div>
+
+      <!-- Panel 3 Background: Warm Ambient Jar Caustics -->
+      <div class="bg bg-3">
+        <div class="glow glow-3"></div>
+      </div>
+
+      <!-- Panel 4 Background: Deep Forest Midnight -->
+      <div class="bg bg-4">
+        <div class="glow glow-4"></div>
+      </div>
+    </div>
+
+    <!-- 2. CINEMATIC HERO ANIMATION LAYER (Flower, Drop, Canvas, & Living Honeybee) -->
+    <div class="anim-layer" aria-hidden="true">
+      <!-- Golden Pollen Dust Trails -->
+      <canvas id="pollen-canvas" class="pollen-canvas"></canvas>
+
+      <!-- Giant Wildflower Blossom (Hero) -->
+      <div class="flower-holder">
+        <img src="assets/flower.png" alt="" width="880" height="880" loading="eager" decoding="async">
+      </div>
+
+      <!-- Original transparent honeycomb and open Golden Bloom jar. -->
+      <div class="hive-holder">
+        <div class="hive-halo"></div>
+        <img class="hive-photo" src="assets/story-honeycomb.png" alt="" width="2000" height="2000" loading="eager" decoding="async">
+      </div>
+      <div class="nectar-thread"></div>
+      <div class="story-jar">
+        <div class="jar-floor-light"></div>
+        <img class="story-jar-photo" src="assets/story-honey-jar.png" alt="" width="1248" height="1248" loading="eager" decoding="async">
+        <div class="jar-sheen"></div>
+        <div class="jar-fill"></div>
+        <div class="jar-impact"><span class="impact-ring"></span><span class="impact-ring"></span></div>
+        <div class="honey-splash"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      </div>
+
+      <!-- Golden Honey Drop (Falls in Panel 2) -->
+      <div class="drop-holder">
+        <img src="assets/honey-drop.svg" alt="" width="140" height="236" loading="eager" decoding="async">
+        <div class="drop-gleam"></div>
+      </div>
+
+      <!-- The Living Animated Honey Bee (Roams across all panels) -->
+      <div class="bee-holder" aria-label="Golden honeybee following the nectar journey">
+        <div class="bee-aura"></div>
+        <div class="bee-float">
+          <img class="bee-img" src="assets/bee.webp" alt="" width="215" height="182" loading="eager" decoding="async">
+        </div>
+        <div class="bee-shadow"></div>
+      </div>
+    </div>
+
+    <div class="journey-caption" aria-hidden="true"><span class="journey-caption-line"></span><span id="journey-chapter">01 / 04 &mdash; The wild bloom</span><span class="journey-caption-note">A journey from bloom to jar</span></div>
+
+    <!-- 3. CONTENT STACK (Panels 1 - 4) -->
+    <div class="content-stack">
+
+      <!-- PANEL 1: THE BLOOM -->
+      <section id="panel-1" class="panel" aria-label="Panel 1: Pure Nectar">
+        <div class="wrap">
+          <div class="copy">
+            <p class="eyebrow rv">GOLDEN BLOOM HONEY</p>
+            <h1 class="display rv">A Little Golden<br><em>Goodness.</em></h1>
+            <p class="lede rv">Slow mornings. Warm toast. A golden drizzle. Make a little room for Golden Bloom in the moments you enjoy every day.</p>
+            <div class="actions rv">
+              <a href="#collection" class="btn" id="shop-now" data-goto="3">
+                <span>Taste Pure Honey</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+              <a href="#panel-2" class="btn btn-ghost" id="story-link" data-goto="1">Explore The Journey</a>
+            </div>
+            <div class="rv">
+              <span class="micro"><span class="dot"></span> Breakfast &middot; Drinks &middot; Everyday Recipes</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Static Fallback Art (No-JS / reduced motion) -->
+        <div class="static-art static-flower" aria-hidden="true">
+          <img src="assets/flower.png" alt="" width="760" height="760" loading="lazy">
+        </div>
+        <div class="static-art static-bee" aria-hidden="true">
+          <picture>
+            <source srcset="assets/bee.webp" type="image/webp">
+            <img src="assets/bee.gif" alt="" width="190" height="161" loading="lazy">
+          </picture>
+        </div>
+
+        <!-- Scroll Indicator Hint -->
+        <div class="scroll-hint" aria-hidden="true">
+          <span class="scroll-line"></span>
+          <span>Scroll to explore</span>
+        </div>
+      </section>
+
+      <!-- PANEL 2: NECTAR DROP -->
+      <section id="panel-2" class="panel" aria-label="Panel 2: One Drop at a Time">
+        <div class="wrap">
+          <div class="copy">
+            <p class="eyebrow rv">FROM FLOWER TO HONEYCOMB</p>
+            <h2 class="title rv">A little wonder.<br><em>A drop of gold.</em></h2>
+            <p class="lede rv">It starts with a flower and a visiting bee. Follow the nectar back to the honeycomb, where the story of honey takes shape, one golden drop at a time.</p>
+          </div>
+        </div>
+
+        <div class="static-art static-drop" aria-hidden="true">
+          <img src="assets/honey-drop.svg" alt="" width="130" height="220" loading="lazy">
+        </div>
+      </section>
+
+      <!-- PANEL 3: RAW BENEFITS -->
+      <section id="panel-3" class="panel" aria-label="Panel 3: THE EVERYDAY HONEY RITUAL">
+        <div class="wrap">
+          <div class="split">
+            <div class="copy">
+              <p class="eyebrow rv">THE EVERYDAY HONEY RITUAL</p>
+              <h2 class="title rv">Small Drizzles.<br>Lovely Moments.</h2>
+              <p class="lede rv">From a quiet breakfast to something shared around the table, there is more than one way to enjoy a spoonful of Golden Bloom.</p>
+              <div class="benefits">
+                <div class="benefit">
+                  <span class="ico" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                  </span>
+                  <div><strong>Breakfast, Brightened</strong> &mdash; Drizzle over toast, porridge or a bowl of yoghurt.</div>
+                </div>
+                <div class="benefit">
+                  <span class="ico" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                  </span>
+                  <div><strong>Your Favourite Cup</strong> &mdash; Stir a little into tea or a homemade lemon drink.</div>
+                </div>
+                <div class="benefit">
+                  <span class="ico" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                  </span>
+                  <div><strong>A Finishing Touch</strong> &mdash; Try it in dressings, marinades and weekend baking.</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Honey Jar with Golden Glow -->
+            <div class="jar-wrap jar-3-wrap">
+              <div class="jar-honey-glow"></div>
+              <div class="jar jar-3">
+                <img src="assets/honey-jar.webp" alt="Golden Bloom Honey Jar" width="560" height="477" loading="lazy">
+                <div class="ground-shadow"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Ambient Forest Botanical Leaves -->
+        <img class="botanical botanical-a" src="assets/botanical.svg" alt="" aria-hidden="true" width="360" height="360" loading="lazy">
+        <img class="botanical botanical-b" src="assets/botanical.svg" alt="" aria-hidden="true" width="330" height="330" loading="lazy">
+      </section>
+
+      <!-- PANEL 4: RESERVE JAR & PURCHASE -->
+      <section id="panel-4" class="panel" aria-label="Panel 4: The Golden Bloom Jar">
+        <div class="wrap">
+          <div class="split split-end">
+            <div class="copy">
+              <p class="eyebrow rv">THE GOLDEN BLOOM COLLECTION</p>
+              <h2 class="title rv">Bring Home<br>a Golden Moment.</h2>
+              <p class="lede rv">A jar for your breakfast shelf, a thoughtful addition to a shared table, and a little inspiration for your next favourite recipe.</p>
+            </div>
+
+            <!-- Purchase Card -->
+            <div id="purchase-card" class="card">
+              <div class="card-visual">
+                <div class="jar jar-4">
+                  <img src="assets/honey-jar.webp" alt="Golden Bloom Honey 400g Jar" width="240" height="204" loading="lazy">
+                </div>
+              </div>
+              <div class="card-content">
+                <span class="honey-badge">Golden Bloom Honey</span>
+                <p class="card-eyebrow">A golden touch for your table</p>
+                <h3 class="card-title" data-bind="productName">Golden Bloom Classic Honey</h3>
+                <div class="price">
+                  <span class="amount" data-bind="price">&#8377;399</span>
+                  <span class="per">/ <span data-bind="size">400 g</span></span>
+                </div>
+                <div class="actions">
+                  <a href="#collection" class="btn" id="card-buy">Add to Cart</a>
+                  <a href="#panel-1" class="btn btn-ghost" data-goto="0">Replay</a>
+                </div>
+                <ul class="trust">
+                  <li>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span>Made for Everyday Moments</span>
+                  </li>
+                  <li>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span>Enjoy by the Spoonful</span>
+                  </li>
+                  <li>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span>Explore Ways to Enjoy</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      
+      </section>
+
+    </div>
+  </main>
+
+    <!-- =========================================================================
+       SECTION 5: THE GOLDEN COLLECTION (#collection) — A TASTE OF PURE NATURE
+       ========================================================================= -->
+  <section id="collection" class="collection-section" aria-label="Section 5: The Golden Collection">
+   
+
+    <div class="wrap">
+      <!-- Premium Atmospheric Collection Header -->
+      <div class="section-header text-center collection-header">
+        <div class="eyebrow-pill sec-reveal">
+          <span class="eyebrow-accent">&#10022;</span>
+          <span class="eyebrow-text">THE GOLDEN COLLECTION</span>
+          <span class="eyebrow-accent">&#10022;</span>
+        </div>
+        <h2 class="title sec-reveal collection-title">A Taste of Pure Nature</h2>
+        <p class="lede sec-reveal collection-lede">Choose a jar for your kitchen and discover how a little honey can bring a golden finish to the things you already love.</p>
+        <div class="collection-trust-bar sec-reveal"><span class="trust-badge">Breakfast Favourites</span><span class="trust-badge">Drinks &amp; Drizzles</span><span class="trust-badge">Kitchen Inspiration</span></div>
+      </div>
+
+      <!-- Three Featured Product Cards -->
+      <div class="collection-grid" id="collection-grid">
+
+        <!-- PRODUCT 1: Golden Bloom Classic Honey -->
+        <article class="product-card sec-reveal" data-product-id="wildflower-raw">
+          <div class="product-card-inner">
+            <div class="card-top-meta">
+              <span class="product-badge">Everyday Favourite</span>
+              <span class="product-weight">400g Net Wt.</span>
+            </div>
+            <div class="product-visual-wrap">
+              <div class="product-glow-disc"></div>
+              <img src="assets/honey-jar.webp" alt="Golden Bloom Classic Honey 400g" class="product-img" loading="lazy">
+              <div class="product-pedestal"></div>
+            </div>
+            <div class="product-info-wrap">
+              <div class="product-flavor-notes">TOAST &bull; PORRIDGE &bull; YOGHURT</div>
+              <h3 class="product-title">Golden Bloom Classic Honey</h3>
+              <p class="product-desc">A golden addition to your everyday breakfast. Pair with warm toast, porridge or fresh fruit.</p>
+              <div class="product-action-row">
+                <div class="product-price">
+                  <span class="price-symbol">&#8377;</span>
+                  <span class="price-val">399</span>
+                </div>
+                <button type="button" class="btn btn-sm btn-add-cart" data-id="wildflower-raw" aria-label="Add Golden Bloom Classic Honey to Cart">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+                  <span>Add to Cart</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- PRODUCT 2: Golden Bloom Amber Honey (Master Reserve Featured) -->
+        <article class="product-card sec-reveal featured-card" data-product-id="forest-gold">
+          <div class="product-card-inner">
+            <div class="card-top-meta">
+             <span class="product-badge badge-featured">The Golden Collection</span>
+              <span class="product-weight">400g Net Wt.</span>
+            </div>
+            <div class="product-visual-wrap">
+              <div class="product-glow-disc disc-amber"></div>
+              <img src="assets/honey-jar.webp" alt="Golden Bloom Amber Honey 400g" class="product-img" loading="lazy">
+              <div class="product-pedestal pedestal-amber"></div>
+            </div>
+            <div class="product-info-wrap">
+              <div class="product-flavor-notes notes-amber">TEA &bull; LEMON DRINKS &bull; DRIZZLES</div>
+              <h3 class="product-title">Golden Bloom Amber Honey</h3>
+              <p class="product-desc">Make your favourite cup a little sweeter, or finish yoghurt and pancakes with a golden drizzle.</p>
+              <div class="product-action-row">
+                <div class="product-price">
+                  <span class="price-symbol">&#8377;</span>
+                  <span class="price-val">499</span>
+                </div>
+                <button type="button" class="btn btn-sm btn-add-cart" data-id="forest-gold" aria-label="Add Golden Bloom Amber Honey to Cart">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+                  <span>Add to Cart</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- PRODUCT 3: Golden Bloom Signature Honey -->
+        <article class="product-card sec-reveal" data-product-id="honeycomb-reserve">
+          <div class="product-card-inner">
+            <div class="card-top-meta">
+              <span class="product-badge">For Your Pantry</span>
+              <span class="product-weight">400g Net Wt.</span>
+            </div>
+            <div class="product-visual-wrap">
+              <div class="product-glow-disc"></div>
+              <img src="assets/honey-jar.webp" alt="Golden Bloom Signature Honey 400g" class="product-img" loading="lazy">
+              <div class="product-pedestal"></div>
+            </div>
+            <div class="product-info-wrap">
+              <div class="product-flavor-notes">DRESSINGS &bull; MARINADES &bull; BAKING</div>
+              <h3 class="product-title">Golden Bloom Signature Honey</h3>
+              <p class="product-desc">A little kitchen inspiration for dressings, marinades and homemade bakes. Find your favourite pairing.</p>
+              <div class="product-action-row">
+                <div class="product-price">
+                  <span class="price-symbol">&#8377;</span>
+                  <span class="price-val">599</span>
+                </div>
+                <button type="button" class="btn btn-sm btn-add-cart" data-id="honeycomb-reserve" aria-label="Add Golden Bloom Signature Honey to Cart">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+                  <span>Add to Cart</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 6: FROM HIVE TO HOME (#process) — A JOURNEY WRITTEN BY NATURE
+       ========================================================================= -->
+  <section id="process" class="process-section" aria-label="Section 6: From Hive to Home">
+    <div class="wrap">
+      <div class="section-header text-center">
+        <div class="eyebrow-pill sec-reveal">
+          <span class="eyebrow-accent">&#10022;</span>
+          <span class="eyebrow-text">FROM NATURE TO YOUR TABLE</span>
+          <span class="eyebrow-accent">&#10022;</span>
+        </div>
+        <h2 class="title sec-reveal">A Journey Written by Nature</h2>
+        <p class="lede sec-reveal">Explore the flower, the bee, the comb and the jar: four parts of a golden story.</p>
+      </div>
+
+      <div class="process-journey-timeline">
+        <!-- Connecting Line Rail for Desktop & Tablet -->
+        <div class="journey-connecting-rail" aria-hidden="true">
+          <div class="rail-path-base"></div>
+          <div class="rail-path-glow" id="process-rail-glow"></div>
+          <div class="rail-tracker-bee" id="process-marker-bee">
+            <picture>
+              <source srcset="assets/bee.webp" type="image/webp">
+              <img src="assets/bee.gif" alt="" width="36" height="30">
+            </picture>
+          </div>
+        </div>
+
+        <!-- 4 Visually Distinct Storytelling Stages -->
+        <div class="process-stages-grid">
+
+          <!-- STAGE 1: THE BLOOM -->
+          <article class="process-stage-item sec-reveal" data-step="1">
+            <div class="stage-milestone-marker">
+              <div class="milestone-hex">
+                <span>01</span>
+              </div>
+            </div>
+            <div class="stage-content-box">
+              <div class="stage-image-card">
+                <img src="assets/flower.png" alt="A golden flower in bloom" class="stage-img" loading="lazy">
+                <div class="stage-img-gradient"></div>
+                <div class="stage-badge-label">Stage 01 &bull; Foraging</div>
+              </div>
+              <div class="stage-text-card">
+                <h3 class="stage-title">The Bloom</h3>
+                <p class="stage-desc">Flowers provide nectar. A bee visiting a bloom is the beginning of the journey shown here.</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- STAGE 2: THE HIVE -->
+          <article class="process-stage-item sec-reveal" data-step="2">
+            <div class="stage-milestone-marker">
+              <div class="milestone-hex">
+                <span>02</span>
+              </div>
+            </div>
+            <div class="stage-content-box">
+              <div class="stage-image-card">
+                <img src="assets/bee-hive-story.webp" alt="Bees curing nectar in hexagonal comb cells" class="stage-img" loading="lazy">
+                <div class="stage-img-gradient"></div>
+                <div class="stage-badge-label">Stage 02 &bull; Transformation</div>
+              </div>
+              <div class="stage-text-card">
+                <h3 class="stage-title">The Hive</h3>
+                <p class="stage-desc">Inside the hive, bees work together, storing nectar in the familiar hexagonal cells of the honeycomb.</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- STAGE 3: THE HARVEST -->
+          <article class="process-stage-item sec-reveal" data-step="3">
+            <div class="stage-milestone-marker">
+              <div class="milestone-hex">
+                <span>03</span>
+              </div>
+            </div>
+            <div class="stage-content-box">
+              <div class="stage-image-card">
+                <img src="assets/honey-harvest.webp" alt="Honeycomb detail" class="stage-img" loading="lazy">
+                <div class="stage-img-gradient"></div>
+                <div class="stage-badge-label">Stage 03 &bull; Honeycomb</div>
+              </div>
+              <div class="stage-text-card">
+                <h3 class="stage-title">The Harvest</h3>
+                <p class="stage-desc">From the comb to the jar, every part of the honey story begins with the work of the bees.</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- STAGE 4: THE GOLDEN JAR -->
+          <article class="process-stage-item sec-reveal" data-step="4">
+            <div class="stage-milestone-marker">
+              <div class="milestone-hex">
+                <span>04</span>
+              </div>
+            </div>
+            <div class="stage-content-box">
+              <div class="stage-image-card">
+                <img src="assets/honey-dipper-jar.webp" alt="Honey jar and dipper" class="stage-img" loading="lazy">
+                <div class="stage-img-gradient"></div>
+                <div class="stage-badge-label">Stage 04 &bull; Your Table</div>
+              </div>
+              <div class="stage-text-card">
+                <h3 class="stage-title">The Golden Jar</h3>
+                <p class="stage-desc">The journey meets your kitchen. Reach for a spoon and discover a pairing you love.</p>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- =========================================================================
+       SECTION 7: CUSTOMER STORIES (#stories)
+       ========================================================================= -->
+  <section id="stories" class="stories-section" aria-label="Golden Bloom Honey Guide">
+    <div class="wrap">
+      <div class="section-header text-center">
+        <p class="eyebrow sec-reveal">THE GOLDEN BLOOM HONEY GUIDE</p>
+        <h2 class="title sec-reveal">Good to Know.<br>Lovely to Enjoy.</h2>
+        <p class="lede sec-reveal">A few simple habits to make the most of every jar.</p>
+      </div>
+      <div class="honey-guide-grid">
+        <article class="honey-guide-card sec-reveal"><span class="eyebrow">01 / KEEP IT WELL</span><h3>Close the lid. Keep it dry.</h3><p>Store honey in a tightly closed jar, away from direct sunlight and moisture. Use a clean, dry spoon each time.</p></article>
+        <article class="honey-guide-card sec-reveal"><span class="eyebrow">02 / FIND YOUR PAIRING</span><h3>Start with a little drizzle.</h3><p>Try honey with warm toast, yoghurt, fruit or a homemade dressing. Add a little, taste, and adjust to your preference.</p></article>
+        <article class="honey-guide-card sec-reveal"><span class="eyebrow">03 / NOTICE THE TEXTURE</span><h3>Every jar has its moments.</h3><p>Honey can develop crystals over time. Texture alone does not establish its purity; refer to the product label for care and quality information.</p></article>
+      </div>
+      <!-- Editorial Lifestyle Visual Showcase (User Photo) -->
+      <div class="stories-lifestyle-feature sec-reveal">
+        <div class="lifestyle-feature-visual">
+          <img src="assets/honey-lifestyle.webp" alt="Fresh berries and warm brioche toast drizzled with Golden Bloom Raw Honey" class="lifestyle-img" loading="lazy">
+          <div class="lifestyle-glow-overlay"></div>
+        </div>
+        <div class="lifestyle-feature-content">
+          <span class="lifestyle-tag">THE GOLDEN BLOOM TABLE</span>
+          <h3 class="lifestyle-title">A Golden Touch to Your Day</h3>
+          <p class="lifestyle-desc">A drizzle over toast, a spoonful in yoghurt, or a finishing touch for a fruit bowl. Enjoy Golden Bloom your way, one simple pairing at a time.</p>
+          <div class="lifestyle-badges">
+            <span class="lifestyle-badge-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Breakfast Favourites</span>
+            <span class="lifestyle-badge-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Simple Pairings</span>
+            <span class="lifestyle-badge-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Everyday Inspiration</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 8: PREMIUM FOOTER (#footer)
+       ========================================================================= -->
+  <footer id="footer" class="footer-section" aria-label="Section 8: Brand Heritage & Footer">
+  
+
+    <div class="wrap">
+      <div class="footer-main-grid">
+
+        <!-- Column 1: Brand Logo & Mission -->
+        <div class="footer-col col-brand sec-reveal">
+          <a href="#panel-1" class="footer-brand-logo" data-goto="0">
+            <svg width="32" height="36" viewBox="0 0 28 32" fill="none" aria-hidden="true">
+              <polygon points="14,1 27,8.5 27,23.5 14,31 1,23.5 1,8.5" stroke="var(--gold)" stroke-width="2" fill="rgba(245, 185, 40, 0.12)"/>
+              <path d="M14 8 C11 13 8 16 8 20 C8 23.3 10.7 26 14 26 C17.3 26 20 23.3 20 20 C20 16 17 13 14 8 Z" fill="var(--gold)"/>
+            </svg>
+            <span class="footer-brand-text">Golden Bloom</span>
+          </a>
+          <p class="footer-brand-bio">Golden Bloom celebrates the little golden moments around your table. Explore honey, discover a new pairing and make everyday meals a little more special.</p>
+
+        </div>
+
+        <!-- Column 2: Navigation to all 8 Sections -->
+       <div class="footer-col col-nav sec-reveal">
+  <h4 class="footer-heading">Uses of Honey</h4>
+  <ul class="footer-nav-list">
+    <li><a href="#stories" data-goto="6">1. Natural Sweetener</a></li>
+    <li><a href="#stories" data-goto="6">2. Daily Morning Drink</a></li>
+    <li><a href="#stories" data-goto="6">3. Tea & Coffee</a></li>
+    <li><a href="#stories" data-goto="6">4. Breakfast & Toast</a></li>
+    <li><a href="#stories" data-goto="6">5. Desserts & Baking</a></li>
+   
+  </ul>
+</div>
+
+        <!-- Column 3: Collections & Support -->
+        <div class="footer-col col-links sec-reveal">
+          <h4 class="footer-heading">Collections &amp; Care</h4>
+          <ul class="footer-nav-list">
+            <li><a href="#collection" data-goto="4">Classic Honey (400g)</a></li>
+            <li><a href="#collection" data-goto="4">Amber Honey (400g)</a></li>
+            <li><a href="#collection" data-goto="4">Golden Bloom Signature Honey (400g)</a></li>
+            <li><a href="#panel-4" data-goto="3">The Golden Jar (400g)</a></li>
+
+            
+          </ul>
+        </div>
+
+        <!-- Column 4: Newsletter & Contact -->
+        <div class="footer-col col-newsletter sec-reveal">
+          <h4 class="footer-heading">A Jar Full of Possibilities</h4>
+          <p class="footer-newsletter-text">Breakfast drizzles. Favourite drinks. Weekend recipes. Find a little golden inspiration for your table.</p>
+          <a href="#stories" class="btn btn-sm" data-goto="6">Explore the Honey Guide</a>
+        </div>
+
+      </div>
+
+      <!-- Footer Bottom Legal -->
+      <div class="footer-bottom-bar sec-reveal">
+        <p>&copy; <span id="footer-year">2026</span> Golden Bloom. A little golden goodness. All rights reserved.</p>
+        <div class="footer-legal-links"><a href="#stories" data-goto="6">Honey Guide</a><span>&middot;</span><a href="#collection" data-goto="4">Our Collection</a></div>
+      </div>
+    </div>
+  </footer>
+    <!-- Top Real Viscous Honey Dripping Banner -->
+  <div class="honey-drip-top" aria-hidden="true">
+    <svg class="honey-drip-svg" viewBox="0 0 1440 92" preserveAspectRatio="none" fill="none">
+      <defs>
+        <linearGradient id="honey-top-grad" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#F5B928" stop-opacity="0.95"/>
+          <stop offset="65%" stop-color="#D97706" stop-opacity="0.88"/>
+          <stop offset="100%" stop-color="#92400E" stop-opacity="0.75"/>
+        </linearGradient>
+      </defs>
+      <path d="M0 0 L1440 0 L1440 32 Q1360 48 1280 28 Q1180 62 1080 34 Q980 18 900 42 Q820 68 740 38 Q660 14 580 44 Q500 70 420 30 Q340 18 260 52 Q180 72 100 36 Q50 22 0 35 Z" fill="url(#honey-top-grad)"/>
+   
+    </svg>
+  </div>
+
+  <!-- =========================================================================
+       GLOBAL SHOPPING CART DRAWER & CHECKOUT EXPERIENCE
+       ========================================================================= -->
+  <div id="cart-drawer-root" class="cart-drawer-root" aria-hidden="true">
+    <!-- Darkened Blurred Backdrop -->
+    <div id="cart-backdrop" class="cart-backdrop" tabindex="-1"></div>
+
+    <!-- Sliding Right Panel -->
+    <aside class="cart-panel" role="dialog" aria-modal="true" aria-label="Shopping Cart">
+      <!-- Drawer Header -->
+      <div class="cart-header">
+        <div class="cart-title-wrap">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2" aria-hidden="true">
+            <circle cx="9" cy="21" r="1"/>
+            <circle cx="20" cy="21" r="1"/>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+          </svg>
+          <h2 class="cart-title">Your Honey Cart</h2>
+          <span class="cart-header-count" id="cart-header-count">(0 items)</span>
+        </div>
+        <button type="button" class="cart-close-btn" id="cart-close-btn" aria-label="Close cart drawer">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+
+      <!-- VIEW 1: CART ITEMS VIEW -->
+      <div id="cart-view-items" class="cart-view-stage is-active">
+        <!-- Scrollable Items Container -->
+        <div class="cart-items-scroll" id="cart-items-container">
+          <!-- Populated dynamically by script.js -->
+        </div>
+
+        <!-- Cart Financial Summary & Checkout Trigger -->
+        <div class="cart-summary" id="cart-summary">
+          <div class="summary-line">
+            <span>Subtotal</span>
+            <span class="summary-val" id="cart-subtotal">&#8377;0</span>
+          </div>
+          <div class="summary-line">
+            <span>Delivery</span>
+            <span class="summary-val" id="cart-shipping">&#8377;99</span>
+          </div>
+          <div class="shipping-policy-note" id="shipping-policy-note">
+            Delivery charges are confirmed when ordering.
+          </div>
+          <div class="summary-line total-line">
+            <span>Basket Subtotal</span>
+            <span class="summary-val total-val" id="cart-total">&#8377;99</span>
+          </div>
+          <button type="button" class="btn btn-checkout" id="btn-to-checkout">
+            <span>Proceed to Checkout</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+          </button>
+          <button type="button" class="btn btn-ghost btn-continue" id="btn-continue-shop">
+            <span>Continue Shopping</span>
+          </button>
+        </div>
+      </div>
+
+      <div id="cart-view-checkout" class="cart-view-stage">
+        <button type="button" class="checkout-back-link" id="btn-back-to-cart">&larr; Back to Basket</button>
+        <div class="checkout-scroll-area">
+          
+          <form id="checkout-form" class="checkout-form">
+            <h3 class="checkout-section-heading">Delivery Details</h3>
+            <div class="form-group"><label for="c-name">Full Name *</label><input class="form-input" id="c-name" name="name" autocomplete="name" required minlength="3" placeholder="Your full name"></div>
+            <div class="form-row">
+              <div class="form-group"><label for="c-mobile">Mobile Number *</label><input class="form-input" id="c-mobile" name="mobile" type="tel" inputmode="numeric" autocomplete="tel-national" required pattern="[0-9]{10}" maxlength="10" title="Enter a 10-digit mobile number" placeholder="10-digit mobile number"></div>
+              <div class="form-group"><label for="c-email">Email Address *</label><input class="form-input" id="c-email" name="email" type="email" autocomplete="email" required placeholder="Your email address"></div>
+            </div>
+            <div class="form-group"><label for="c-address">Street Address *</label><input class="form-input" id="c-address" name="address" autocomplete="street-address" required minlength="5" placeholder="House number, street, locality"></div>
+            <div class="form-row">
+              <div class="form-group"><label for="c-city">City *</label><input class="form-input" id="c-city" name="city" autocomplete="address-level2" required placeholder="Your city"></div>
+              <div class="form-group"><label for="c-pincode">PIN Code *</label><input class="form-input" id="c-pincode" name="pincode" inputmode="numeric" autocomplete="postal-code" required pattern="[0-9]{6}" maxlength="6" title="Enter a 6-digit PIN code" placeholder="6-digit PIN code"></div>
+            </div>
+            <div class="checkout-order-review"><div class="review-line"><span>Items</span><span id="review-items-count">0</span></div><div class="review-line review-total"><span>Subtotal</span><span id="review-total-val">&#8377;0</span></div></div>
+            <button type="submit" class="btn btn-place-order" id="btn-place-order">Submit Demo Order</button>
+          </form>
+        </div>
+      </div>
+      <div id="cart-view-success" class="cart-view-stage">
+        <div class="order-success-wrap" role="status" aria-live="polite">
+          <div class="success-bee-icon" aria-hidden="true">&#10003;</div>
+          <h3 class="success-title" id="checkout-confirmation" tabindex="-1">Form Submitted Successfully!</h3>
+          <p class="success-desc">Thank you for choosing Golden Bloom. Your demo checkout is complete. No real order has been placed and no payment has been taken.</p>
+          <button type="button" class="btn btn-sm btn-success-done" id="btn-success-done">Continue Exploring</button>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <!-- Real-time Toast Notifications -->
+  <div id="cart-toast" class="cart-toast" role="status" aria-live="polite">
+    <div class="toast-icon">&#127855;</div>
+    <div class="toast-content">
+      <div class="toast-title" id="toast-title">Added to Cart</div>
+      <div class="toast-desc" id="toast-desc">Item added to your basket.</div>
+    </div>
+  </div>
+
+
+
+  <!-- CDNs: GSAP 3 & ScrollTrigger -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+
+  <!-- Application Script -->
+  <script src="assets/three.min.js"></script>
+  <script src="bee-3d.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
